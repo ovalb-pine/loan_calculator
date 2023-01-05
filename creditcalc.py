@@ -19,11 +19,11 @@ if (args.payment or args.principal or args.periods or args.interest) <= 0:  # ch
 
 m = 1  # setting month counter to 1
 
-if args.type == 'diff':  # continuing if differencial calculation is chosen
+if args.type == 'diff':  # continuing if differential calculation is chosen
     if not (args.principal and args.periods and args.interest):  # checking if all needed arguments are present
         print('Incorrect parameters')
     else:
-        summa = 0  # inroducing the sum variable
+        summa = 0  # introducing the sum variable
         while m <= args.periods:  # running the calculation for all given months
             nom_int_rate = args.interest / 1200
             diff_payment = math.ceil(args.principal / args.periods + nom_int_rate *
